@@ -1,2 +1,2 @@
 # me-finances
-just gaining programming exp ._.
+Just gaining programming exp ._.
