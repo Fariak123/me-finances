@@ -3,7 +3,7 @@ import Link from "next/link"
 import { use } from "react"
 import BankCard from "./BankCard"
 
-const RightSidebar = ({user, transactions, banks}: RightSidebarProps) => {
+const RightSidebar = ({ user, transactions, banks }: RightSidebarProps) => {
     return (
         <aside className="right-sidebar">
             <section className="flex flex-col pb-8">
@@ -30,7 +30,7 @@ const RightSidebar = ({user, transactions, banks}: RightSidebarProps) => {
                         My Banks
                     </h2>
                     <Link href='/' className="flex gap-2">
-                        <Image 
+                        <Image
                             src='/icons/plus.svg'
                             width={20}
                             height={20}
@@ -45,7 +45,7 @@ const RightSidebar = ({user, transactions, banks}: RightSidebarProps) => {
                 {banks?.length > 0 && (
                     <div className="relative flex flex-1 flex-col items-center justify-center gap-5">
                         <div className="relative z-10">
-                            <BankCard 
+                            <BankCard
                                 key={banks[0].$id}
                                 account={banks[0]}
                                 userName={`${user.firstName} ${user.lastName}`}
@@ -54,7 +54,7 @@ const RightSidebar = ({user, transactions, banks}: RightSidebarProps) => {
                         </div>
                         {banks[1] && (
                             <div className="absolute right-0 top-8 z-0 w-[90%]">
-                                <BankCard 
+                                <BankCard
                                     key={banks[1].$id}
                                     account={banks[1]}
                                     userName={`${user.firstName} ${user.lastName}`}
