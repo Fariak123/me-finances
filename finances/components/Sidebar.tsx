@@ -6,7 +6,7 @@ import { sidebarLinks } from "@/constants";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 
-const Sidebar = ({user}: SiderbarProps) => {
+const Sidebar = ({ user }: SiderbarProps) => {
     const pathName = usePathname()
 
     return (
@@ -19,10 +19,10 @@ const Sidebar = ({user}: SiderbarProps) => {
                         height={56}
                         alt='MeFinances logo'
                         className="aspect-square object-cover"
-                    /> 
+                    />
                     <h1 className="sidebar-logo">
                         MeFs
-                    </h1>   
+                    </h1>
                 </Link>
 
                 {sidebarLinks.map((item) => {
@@ -34,13 +34,13 @@ const Sidebar = ({user}: SiderbarProps) => {
                         })}>
                             <div className="relative size-6">
                                 <Image
-                                src={item.imgURL}
-                                alt={item.label}
-                                fill
-                                className={cn({'brightness-[3] invert-0': isActive})}
+                                    src={item.imgURL}
+                                    alt={item.label}
+                                    fill
+                                    className={cn({ 'brightness-[3] invert-0': isActive })}
                                 />
                             </div>
-                            <p className={cn('sidebar-label', {'!text-white': isActive})}>
+                            <p className={cn('sidebar-label', { '!text-white': isActive })}>
                                 {item.label}
                             </p>
                         </Link>

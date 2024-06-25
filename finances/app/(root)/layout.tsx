@@ -7,27 +7,27 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const loggedIn = { firstName: 'Jack', lastName: 'Light'}
+  const loggedIn = { firstName: 'Jack', lastName: 'Light' }
 
   return (
     <main className="flex h-screen w-full font-inter">
-        <Sidebar user={loggedIn} />
+      <Sidebar user={loggedIn} />
 
-        <div className="flex size-full flex-col">
-          <div className="root-layout">
-            <Image
-              src='/icons/logo-black.png'
-              width={36}
-              height={36}
-              alt='MeFinances logo'
-              className="aspect-square object-cover"
-            /> 
-            <div>
-              <MobileNav user={loggedIn} />
-            </div>
+      <div className="flex size-full flex-col">
+        <div className="root-layout">
+          <Image
+            src='/icons/logo-black.png'
+            width={36}
+            height={36}
+            alt='MeFinances logo'
+            className="aspect-square object-cover"
+          />
+          <div>
+            <MobileNav user={loggedIn} />
           </div>
-          {children}
         </div>
+        {children}
+      </div>
     </main>
   );
 }
