@@ -21,12 +21,12 @@ const Sidebar = ({ user }: SiderbarProps) => {
                         className="aspect-square object-cover"
                     />
                     <h1 className="sidebar-logo">
-                        MeFs
+                        MeFns
                     </h1>
                 </Link>
 
                 {sidebarLinks.map((item) => {
-                    const isActive = pathName === item.route || pathName.startsWith(`${item.route}`)
+                    const isActive = pathName === item.route || pathName.startsWith(`${item.route}/`)
 
                     return (
                         <Link href={item.route} key={item.label} className={cn('sidebar-link', {
